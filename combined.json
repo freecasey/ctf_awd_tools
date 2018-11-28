@@ -1,0 +1,33 @@
+[
+  {
+    "type": "exec",
+    "content": [
+      {
+        "ip": "100.112.56.128",
+        "username": "root",
+        "passwd": "Huawei12#$",
+        "cmds": [
+          "cd /opt",
+          "cp flag flag_tmp",
+          "echo '' > flag"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "download",
+    "content": [
+      {
+        "ip": "100.112.56.128",
+        "username": "root",
+        "passwd": "Huawei12#$",
+        "filelist": [
+          {
+            "remotepath": "/opt/flag_tmp",
+            "localpath": "flag"
+          }
+        ]
+      }
+    ]
+  }
+]
