@@ -1,0 +1,4 @@
+fping-a -g 192.168.1.1 192.168.1.255
+nmap-sn192.168.1.1/24
+https://github.com/zer0h/httpscan
+
