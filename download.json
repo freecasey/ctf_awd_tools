@@ -1,0 +1,32 @@
+[
+  {
+    "ip": "100.112.56.128",
+    "username": "root",
+    "passwd": "Huawei12#$",
+    "filelist": [
+      {
+        "remotepath": "",
+        "localpath": ""
+      },
+      {
+        "remotepath": "",
+        "localpath": ""
+      }
+    ]
+  },
+  {
+    "ip": "100.112.56.128",
+    "username": "root",
+    "passwd": "Huawei12#$",
+    "filelist": [
+      {
+        "remotepath": "",
+        "localpath": ""
+      },
+      {
+        "remotepath": "",
+        "localpath": ""
+      }
+    ]
+  }
+]
