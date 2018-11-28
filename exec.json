@@ -1,0 +1,16 @@
+[
+  {
+    "ip": "100.112.56.128",
+    "username": "root",
+    "passwd": "Huawei12#$",
+    "cmds": [
+      "uname -a", "whoami"
+    ]
+  },
+  {
+    "ip": "100.112.56.128",
+    "username": "root",
+    "passwd": "Huawei12#$",
+    "cmds": []
+  }
+]
