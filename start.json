@@ -1,0 +1,48 @@
+[
+  {
+    "type": "upload",
+    "content": [
+      {
+        "ip": "100.112.56.128",
+        "username": "root",
+        "passwd": "Huawei12#$",
+        "filelist": [
+          {
+            "remotepath": "/opt/file_md5sum.sh",
+            "localpath": "file_md5sum.sh"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "exec",
+    "content": [
+      {
+        "ip": "100.112.56.128",
+        "username": "root",
+        "passwd": "Huawei12#$",
+        "cmds": [
+          "pwd",
+          "sh  /opt/file_md5sum.sh"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "download",
+    "content": [
+      {
+        "ip": "100.112.56.128",
+        "username": "root",
+        "passwd": "Huawei12#$",
+        "filelist": [
+          {
+            "remotepath": "/opt/fp.chksum",
+            "localpath": "fp.chksum"
+          }
+        ]
+      }
+    ]
+  }
+]
