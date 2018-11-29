@@ -1,0 +1,51 @@
+[
+    {
+        "host":[
+            {
+                "type":"exec",
+                "content":[
+                    {
+                        "ip":"100.112.56.128",
+                        "username":"root",
+                        "passwd":"Huawei12#$",
+                        "cmds":[
+                            "ps -ef|grep tcpdump|grep -v grep|awk '{print $2}'|xargs kill -9",
+                            "rm /opt/huaweictf.pcap",
+                            "sudo tcpdump -i any -s 0 tcp or udp -w /opt/huaweictf.pcap"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type":"clear",
+                "content":[
+                    {
+                        "ip":"100.112.56.128",
+                        "username":"root",
+                        "passwd":"Huawei12#$",
+                        "cmds":[
+                            "cp /opt/huaweictf.pcap /opt/huaweictf_down.pcap",
+                            "cp /dev/null /opt/huaweictf.pcap"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type":"download",
+                "content":[
+                    {
+                        "ip":"100.112.56.128",
+                        "username":"root",
+                        "passwd":"Huawei12#$",
+                        "filelist":[
+                            {
+                                "remotepath":"/opt/huaweictf_down.pcap",
+                                "localpath":"huaweictf"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
