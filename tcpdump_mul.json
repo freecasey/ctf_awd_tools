@@ -10,8 +10,9 @@
                         "passwd":"Huawei12#$",
                         "cmds":[
                             "ps -ef|grep tcpdump|grep -v grep|awk '{print $2}'|xargs kill -9",
-                            "rm /opt/huaweictf.pcap",
-                            "sudo tcpdump -i any -s 0 tcp or udp -w /opt/huaweictf.pcap"
+                            "rm -rf /opt/huaweictf 2>/dev/null",
+                            "mkdir /opt/huaweictf",
+                            "sudo tcpdump -i any -s 0 -G 60 tcp -w /opt/huaweictf/ctf_%Y_%m%d_%H%M_%S.pcap"
                         ]
                     }
                 ]
@@ -24,8 +25,9 @@
                         "username":"root",
                         "passwd":"Huawei12#$",
                         "cmds":[
-                            "cp /opt/huaweictf.pcap /opt/huaweictf_down.pcap",
-                            "cp /dev/null /opt/huaweictf.pcap"
+                            "rm -rf /opt/huaweictf_down",
+                            "cp -r /opt/huaweictf /opt/huaweictf_down",
+                            "rm -rf /opt/huaweictf/*"
                         ]
                     }
                 ]
@@ -39,7 +41,7 @@
                         "passwd":"Huawei12#$",
                         "filelist":[
                             {
-                                "remotepath":"/opt/huaweictf_down.pcap",
+                                "remotepath":"/opt/huaweictf_down/",
                                 "localpath":"huaweictf"
                             }
                         ]
